@@ -8,8 +8,11 @@ import {
 } from "react-native";
 import React from "react";
 import { Feather } from "@expo/vector-icons";
+import New from "../components/New";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Home() {
+  const navigation = useNavigation();
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -33,7 +36,44 @@ export default function Home() {
         showsHorizontalScrollIndicator={false}
         horizontal
         style={{ paddingHorizontal: 15 }}
-      ></ScrollView>
+      >
+        <New
+          cover={require("../assets/house1.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          onPress={() => navigation.navigate("Detail")}
+        />
+        <New
+          cover={require("../assets/house2.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          onPress={() => {}}
+        />
+        <New
+          cover={require("../assets/house3.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          onPress={() => {}}
+        />
+        <New
+          cover={require("../assets/house4.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          onPress={() => {}}
+        />
+        <New
+          cover={require("../assets/house5.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          onPress={() => {}}
+        />
+        <New
+          cover={require("../assets/house6.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          onPress={() => {}}
+        />
+      </ScrollView>
     </ScrollView>
   );
 }
