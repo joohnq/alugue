@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function New(props) {
+export default function CardItemBlock(props) {
   return (
     <TouchableOpacity onPress={props.onPress} style={styles.container}>
       <Image source={props.cover} style={styles.cover} />
@@ -26,7 +26,6 @@ export default function New(props) {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
     backgroundColor: "#fff",
     height: 250,
     width: 200,
@@ -36,6 +35,7 @@ const styles = StyleSheet.create({
     marginRight: 30,
     marginLeft: 2,
     marginBottom: 5,
+    marginTop: 15,
   },
   cover: {
     width: 170,

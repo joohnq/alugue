@@ -8,8 +8,10 @@ import {
 } from "react-native";
 import React from "react";
 import { Feather } from "@expo/vector-icons";
-import New from "../components/New";
 import { useNavigation } from "@react-navigation/native";
+import CardItemBlock from "../components/CardItemBlock";
+import CardItemLine from "../components/CardItemLine";
+import CardItemBlur from "../components/CardItemBlur";
 
 export default function Home() {
   const navigation = useNavigation();
@@ -35,42 +37,142 @@ export default function Home() {
       <ScrollView
         showsHorizontalScrollIndicator={false}
         horizontal
-        style={{ paddingHorizontal: 15 }}
+        style={{ paddingHorizontal: 15, marginBottom: 20 }}
       >
-        <New
+        <CardItemBlock
           cover={require("../assets/house1.jpg")}
           name="Casa de Praia"
           description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
           onPress={() => navigation.navigate("Detail")}
         />
-        <New
+        <CardItemBlock
           cover={require("../assets/house2.jpg")}
           name="Casa de Praia"
           description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
           onPress={() => {}}
         />
-        <New
+        <CardItemBlock
           cover={require("../assets/house3.jpg")}
           name="Casa de Praia"
           description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
           onPress={() => {}}
         />
-        <New
+        <CardItemBlock
           cover={require("../assets/house4.jpg")}
           name="Casa de Praia"
           description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
           onPress={() => {}}
         />
-        <New
+        <CardItemBlock
           cover={require("../assets/house5.jpg")}
           name="Casa de Praia"
           description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
           onPress={() => {}}
         />
-        <New
+        <CardItemBlock
           cover={require("../assets/house6.jpg")}
           name="Casa de Praia"
           description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          onPress={() => {}}
+        />
+      </ScrollView>
+
+      <View style={styles.contentNew}>
+        <Text style={styles.title}>Próximo de você</Text>
+      </View>
+
+      <ScrollView
+        showsHorizontalScrollIndicator={false}
+        horizontal
+        style={{ paddingHorizontal: 15, marginBottom: 20 }}
+      >
+        <CardItemLine
+          cover={require("../assets/house1.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          price={'1200,00'}
+          onPress={() => {}}
+        />
+        <CardItemLine
+          cover={require("../assets/house2.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          price={'1200,00'}
+          onPress={() => {}}
+        />
+        <CardItemLine
+          cover={require("../assets/house3.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          price={'1200,00'}
+          onPress={() => {}}
+        />
+        <CardItemLine
+          cover={require("../assets/house4.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          price={'1200,00'}
+          onPress={() => {}}
+        />
+        <CardItemLine
+          cover={require("../assets/house5.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          price={'1200,00'}
+          onPress={() => {}}
+        />
+        <CardItemLine
+          cover={require("../assets/house6.jpg")}
+          name="Casa de Praia"
+          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          price={'1200,00'}
+          onPress={() => {}}
+        />
+      </ScrollView>
+
+      <View style={styles.contentNew}>
+        <Text style={styles.title}>Dica do dia</Text>
+      </View>
+
+      <ScrollView
+        showsHorizontalScrollIndicator={false}
+        horizontal
+        style={{ paddingHorizontal: 15, marginBottom: 20 }}
+      >
+        <CardItemBlur
+          cover={require("../assets/house1.jpg")}
+          name="Casa de Praia"
+          offer={25}
+          onPress={() => {}}
+        />
+        <CardItemBlur
+          cover={require("../assets/house2.jpg")}
+          name="Casa de Praia"
+          offer={25}
+          onPress={() => {}}
+        />
+        <CardItemBlur
+          cover={require("../assets/house3.jpg")}
+          name="Casa de Praia"
+          offer={25}
+          onPress={() => {}}
+        />
+        <CardItemBlur
+          cover={require("../assets/house4.jpg")}
+          name="Casa de Praia"
+          offer={25}
+          onPress={() => {}}
+        />
+        <CardItemBlur
+          cover={require("../assets/house5.jpg")}
+          name="Casa de Praia"
+          offer={25}
+          onPress={() => {}}
+        />
+        <CardItemBlur
+          cover={require("../assets/house6.jpg")}
+          name="Casa de Praia"
+          offer={25}
           onPress={() => {}}
         />
       </ScrollView>
